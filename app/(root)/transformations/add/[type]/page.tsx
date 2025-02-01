@@ -1,7 +1,7 @@
 import React from "react";
 
-const page = () => {
-  return <div>page</div>;
+const AddTransformationTypePage = () => {
+  return <div>AddTransformationTypePage</div>;
 };
 
-export default page;
+export default AddTransformationTypePage;
