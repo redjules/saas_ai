@@ -39,6 +39,8 @@ export async function POST(req: Request) {
 
   let evt: WebhookEvent;
 
+  console.log("clerk event received!!!");
+
   // Verify the payload with the headers
   try {
     evt = wh.verify(body, {
@@ -71,6 +73,7 @@ export async function POST(req: Request) {
       photo: image_url,
     };
 
+    console.log("clerk event:user created\n", user, "\nCreating user in mongo");
     const newUser = await createUser(user);
 
     // Set public metadata
